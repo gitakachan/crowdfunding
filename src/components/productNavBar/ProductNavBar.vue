@@ -1,9 +1,13 @@
 <template>
-  <div class="product-nav-bar bg-white">
+  <div class="product-nav-bar bg-white border">
     <div class="container">
-      <router-link v-for="item in links" :key="item.title" :to="item.path">{{
-        item.title
-      }}</router-link>
+      <router-link
+        class="text-decoration-none"
+        v-for="item in links"
+        :key="item.title"
+        :to="item.path"
+        >{{ item.title }}</router-link
+      >
     </div>
   </div>
 </template>
