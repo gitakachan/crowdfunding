@@ -47,7 +47,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 992px) {
   .product-nav-bar a {
     height: 52px;
     line-height: 52px;
