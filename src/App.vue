@@ -3,7 +3,15 @@
     <nav-bar></nav-bar>
     <product></product>
     <product-nav-bar></product-nav-bar>
-    <router-view></router-view>
+
+    <div class="product-details container">
+      <div class="row">
+        <div class="left col-12 col-lg-8">
+          <router-view></router-view>
+        </div>
+        <div class="right col-12 col-lg-4 bg-primary">kk</div>
+      </div>
+    </div>
   </div>
 </template>
 
