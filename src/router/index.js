@@ -15,6 +15,10 @@ const routes = [
     path: "/",
     redirect: "/product/intro",
   },
+  {
+    path: "/crowdfunding",
+    redirect: "/product/intro",
+  },
 
   {
     path: "/product/intro",
