@@ -15,10 +15,6 @@ const routes = [
     path: "/",
     redirect: "/product/intro",
   },
-  {
-    path: "/crowdfunding",
-    redirect: "/product/intro",
-  },
 
   {
     path: "/product/intro",
@@ -44,7 +40,7 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  mode: "history",
+  //mode: "history",
 });
 
 //將路由物件傳入到vue實例中
