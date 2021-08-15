@@ -12,7 +12,6 @@
     <router-link to="/product/message">
       留言
     </router-link>
-
   </div>
 </template>
 <script>
