@@ -1,5 +1,5 @@
 <template>
-  <div class="border-bottom border-2 border-warning">
+  <div class="border-bottom border-5 border-warning">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
