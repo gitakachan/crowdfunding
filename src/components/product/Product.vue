@@ -26,10 +26,8 @@
             alt=""
           />
         </div>
-        <div class="col-5">
-          <div class="content">
-              
-          </div>
+        <div class="col-lg-5">
+          <div class="content"></div>
         </div>
       </div>
     </div>
