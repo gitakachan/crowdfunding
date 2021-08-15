@@ -23,16 +23,21 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav flex-grow-1">
-              <a class="nav-link active" aria-current="page" href="#">關於</a>
-              <a class="nav-link" href="#">挖寶</a>
-              <a class="nav-link me-auto" href="#" tabindex="-1"
-                >我有個大膽的想法</a
+              <a
+                class="nav-link"
+                href="#"
+                v-for="(item, index) in nav"
+                :key="item"
+                :class="{ active: index === currentIndex }"
+                @click="navClick"
               >
+                {{ item }}
+              </a>
               <button
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#login"
-                class="btn border-2 btn-warning rounded-pill "
+                class="btn border-2 btn-warning rounded-pill ms-lg-auto"
                 @click="showLogin = true"
               >
                 登入
@@ -226,7 +231,15 @@ export default {
     return {
       showLogin: false,
       showSignup: false,
+
+      nav: ["關於", "挖寶", "我有個大膽的想法"],
+      currentIndex: 0,
     };
+  },
+  methods: {
+    navClick(index) {
+      this.currentIndex = index;
+    },
   },
 };
 </script>
