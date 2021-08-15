@@ -1,10 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-const Intro = () => import("../views/intro/Intro.vue");
-const Qa = () => import("../views/qa/Qa.vue");
-const Process = () => import("../views/process/Process.vue");
-const Message = () => import("../views/message/Message.vue");
+const Intro = () => import("../views/productDetails/intro/Intro.vue");
+const Qa = () => import("../views/productDetails/qa/Qa.vue");
+const Process = () => import("../views/productDetails/process/Process.vue");
+const Message = () => import("../views/productDetails/message/Message.vue");
 
 //通過Vue.use(插件) 安裝插件
 Vue.use(VueRouter);
