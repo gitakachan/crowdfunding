@@ -1,8 +1,9 @@
 <template>
   <div class="product-nav-bar bg-white border">
-    <div class="container">
+    <div class="container w-100 d-flex">
       <router-link
-        class="text-decoration-none"
+        class="text-decoration-none text-center flex-grow-1 flex-lg-grow-0 link-dark"
+        style="width:96px"
         v-for="item in links"
         :key="item.title"
         :to="item.path"
@@ -16,6 +17,7 @@ export default {
   name: "ProductNavBar",
   data() {
     return {
+      currentIndex: 0,
       links: [
         { title: "專案介紹", path: "/product/intro" },
         { title: "常見問答", path: "/product/qa" },
@@ -24,10 +26,31 @@ export default {
       ],
     };
   },
+  methods: {
+    navClick(idx) {
+      this.currentIndex = idx;
+      console.log(this.currentIndex);
+    },
+  },
 };
 </script>
 <style lang="scss">
 .product-nav-bar {
-  height: 70px;
+  a {
+    height: 70px;
+    line-height: 70px;
+
+    &.router-link-active {
+      font-weight: bold;
+      border-bottom: 2px solid #ffdf65;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .product-nav-bar a {
+    height: 52px;
+    line-height: 52px;
+  }
 }
 </style>
