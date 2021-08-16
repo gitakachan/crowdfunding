@@ -6,13 +6,15 @@
       </div>
       <div class="plan col-12 col-lg-4"><div class="bg-primary">kk</div></div>
       <div class="support col-12 col-lg-8">
-        <div class="bg-secondary">kk</div>
+        <support></support>
       </div>
     </div>
   </div>
 </template>
 <script>
+import Support from "./support/Support.vue";
 export default {
+  components: { Support },
   name: "productDetails",
   data() {
     return {};
