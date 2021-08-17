@@ -16,6 +16,7 @@ export default {
   name: "App",
   components: { NavBar, Product, ProductNavBar, ProductDetails },
 };
+
 </script>
 
 <style lang="scss">
