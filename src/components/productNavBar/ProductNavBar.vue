@@ -1,5 +1,5 @@
 <template>
-  <div class="product-nav-bar bg-white border">
+  <div class="product-nav-bar bg-white border position-sticky sticky-top">
     <div class="container w-100 d-flex">
       <router-link
         class="text-decoration-none text-center flex-grow-1 flex-lg-grow-0 link-dark"
