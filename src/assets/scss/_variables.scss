@@ -385,6 +385,7 @@ $spacers: (
   4: $spacer * 1.5,
   times2: $spacer * 2,
   5: $spacer * 3,
+  20: 20px,
 ) !default;
 
 $negative-spacers: if(
@@ -613,6 +614,7 @@ $h3-font-size: $font-size-base * 1.75 !default;
 $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
+
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -623,6 +625,10 @@ $font-sizes: (
   4: $h4-font-size,
   5: $h5-font-size,
   6: $h6-font-size,
+  12: 12px,
+  14: 14px,
+  18: 18px,
+  times2: 32px,
 ) !default;
 // scss-docs-end font-sizes
 
@@ -794,7 +800,7 @@ $btn-padding-y-lg: $input-btn-padding-y-lg !default;
 $btn-padding-x-lg: $input-btn-padding-x-lg !default;
 $btn-font-size-lg: $input-btn-font-size-lg !default;
 
-$btn-border-width: $input-btn-border-width !default;
+$btn-border-width: 2px; // $input-btn-border-width !default;
 
 $btn-font-weight: $font-weight-normal !default;
 $btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075) !default;
