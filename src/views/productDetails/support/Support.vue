@@ -59,10 +59,10 @@
       </div>
       <!-- block button:
       https://bootstrap5.hexschool.com/docs/5.0/components/buttons/#block-buttons -->
-      <div class="d-grid d-md-block text-center">
+      <div class="d-grid col-12 d-lg-flex justify-content-md-center">
         <button
           type="submit"
-          class="btn btn-warning flex-grow-1 fs-5 mt-times2 mt-lg-2"
+          class="btn btn-warning fs-5 mt-times2 mt-lg-2 text-dark fw-bold"
         >
           贊助專案
         </button>
@@ -96,8 +96,6 @@ export default {
   }
   .btn {
     border-radius: 26px;
-    width: 176px;
-    //height: 52px;
   }
 
   .title {
@@ -109,6 +107,15 @@ export default {
       width: 120px; //104 + padding-x (16px) = 120px
       line-height: 36px;
       letter-spacing: 1.92px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .support {
+    .btn {
+      width: 176px;
+      height: 52px;
     }
   }
 }
