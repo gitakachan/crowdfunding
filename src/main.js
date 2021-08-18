@@ -4,10 +4,11 @@ import App from "./App.vue";
 import $ from "jquery";
 window.$ = $;
 import "bootstrap";
+import "/node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 //vue tooltip
-import VTooltip from 'v-tooltip'
-Vue.use(VTooltip)
+import VTooltip from "v-tooltip";
+Vue.use(VTooltip);
 
 Vue.config.productionTip = false;
 
@@ -15,4 +16,3 @@ new Vue({
   render: (h) => h(App),
   router,
 }).$mount("#app");
-
