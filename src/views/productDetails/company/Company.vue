@@ -1,5 +1,5 @@
 <template>
-  <div class="company container-fluid border border-1 rounded p-3">
+  <div class="company container-fluid border border-1 rounded-3 p-3 mb-times2">
     <div class="d-flex align-items-center mb-3">
       <div
         class="company-img border border-4 border-warning rounded-circle me-3"
