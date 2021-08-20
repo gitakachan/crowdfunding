@@ -1,13 +1,20 @@
 <template>
-  <div class="product-details container overflow-hidden pt-times2 pt-lg-5">
+  <div class="product-details container pt-times2 pt-lg-5">
     <div class="row gx-5">
       <div class="details col-12 col-lg-8 pb-times2 pb-lg-5">
         <router-view></router-view>
       </div>
       <div class="plans col-12 col-lg-4">
-        <company></company>
-        <plans></plans>
+        <div class="plans-sm d-lg-none">
+          <company></company>
+          <plans></plans>
+        </div>
+        <div class="plans-lg d-none d-lg-block">
+          <company></company>
+          <plans></plans>
+        </div>
       </div>
+
       <div class="support col-12 col-lg-8">
         <support></support>
       </div>
@@ -26,4 +33,17 @@ export default {
   },
 };
 </script>
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.product-details {
+  // position: relative;
+  .plans {
+    .plans-lg {
+      position: sticky;
+      top: 80px;
+      overflow: auto;
+      height: calc(100vh - 80px);
+      z-index: -1000;
+    }
+  }
+}
+</style>
