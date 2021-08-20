@@ -1,31 +1,30 @@
 <template>
-  <div class="plans">
+  <div class="plans mb-times2">
     <h4
       class="text-center bg-light border-start border-end border-4 border-warning rounded-3 fs-5 fw-bold mb-3"
     >
       選擇一個方案來支持
     </h4>
-    <div class="items mb-times2">
-      <div class="card rounded-3">
-        <img
-          src="../../../assets/imgs/plans/plan_img.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+    <div class="items">
+      <plan class="mb-3">
+        <template v-slot:title>買一送一，只有兩百組別錯過</template>
+        <template v-slot:price>$1600</template>
+      </plan>
+      <plan class="mb-3">
+        <template v-slot:title>買一送一，只有兩百組別錯過</template>
+        <template v-slot:price>$1600</template>
+      </plan>
+      <plan>
+        <template v-slot:title>買一送一，只有兩百組別錯過</template>
+        <template v-slot:price>$1600</template>
+      </plan>
     </div>
   </div>
 </template>
 <script>
+import plan from "./plan.vue";
 export default {
+  components: { plan },
   name: "Plans",
   data() {
     return {};
