@@ -384,8 +384,9 @@ $spacers: (
   2: $spacer * 0.5,
   3: $spacer,
   4: $spacer * 1.5,
-  times2: $spacer * 2,
+  times2: $spacer * 2, //32px
   5: $spacer * 3,
+  time4: $spacer * 4, //64px
   20: 20px,
 ) !default;
 
