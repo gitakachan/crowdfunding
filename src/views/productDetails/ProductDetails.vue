@@ -37,12 +37,11 @@ export default {
 .product-details {
   // position: relative;
   .plans {
+    position: sticky;
+    top: 80px;
     .plans-lg {
-      position: sticky;
-      top: 80px;
       overflow: auto;
       height: calc(100vh - 80px);
-      z-index: -1000;
     }
   }
 }
