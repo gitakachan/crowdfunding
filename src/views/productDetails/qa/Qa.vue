@@ -21,7 +21,7 @@
           id="collapseOne"
           class="accordion-collapse collapse show"
           aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample"
+          data-bs-parent="#accordion"
         >
           <div class="accordion-body ps-lg-time4">
             可以進行簡易的編輯，內建 5
@@ -49,7 +49,7 @@
           id="collapseTwo"
           class="accordion-collapse collapse"
           aria-labelledby="headingTwo"
-          data-bs-parent="#accordionExample"
+          data-bs-parent="#accordion"
         >
           <div class="accordion-body">
             受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。
