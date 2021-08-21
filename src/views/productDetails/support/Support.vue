@@ -1,5 +1,5 @@
 <template>
-  <div id="test">
+  <div class="support">
     <div class="icon text-center">
       <img
         src="https://hexschool.github.io/boootstrap5WebLayout/assets/hezuo.svg"
