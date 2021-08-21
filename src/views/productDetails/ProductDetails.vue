@@ -4,12 +4,14 @@
       <div class="details col-12 col-lg-8 pb-times2 pb-lg-5">
         <router-view></router-view>
       </div>
-      <div class="plans col-12 col-lg-4">
-        <div class="plans-sm d-lg-none">
+      <div class="plans-sm-container col-12 col-lg-4 d-lg-none">
+        <div class="plans-sm ">
           <company></company>
           <plans></plans>
         </div>
-        <div class="plans-lg d-none d-lg-block">
+      </div>
+      <div class="plans-lg-container col-12 col-lg-4 d-none d-lg-block">
+        <div class="plans-lg">
           <company></company>
           <plans></plans>
         </div>
@@ -36,7 +38,7 @@ export default {
 <style lang="scss" scoped>
 .product-details {
   // position: relative;
-  .plans {
+  .plans-lg-container {
     position: sticky;
     top: 80px;
     .plans-lg {
