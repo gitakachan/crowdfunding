@@ -3,7 +3,7 @@
     <li class="nav-item w-100">
       <a
         class="nav-link w-100 text-center text-dark fw-bold"
-        href="#test"
+        href="#support"
         style="height:44px"
         >贊助專案</a
       >
