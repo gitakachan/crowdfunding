@@ -1,9 +1,30 @@
 <template>
-  <div>
+  <div class="message">
     <messageItem :message="messages[0]">
       <template v-slot:headIcon>
         <div class="headIcon">
-          <img src="" alt="" />
+          <img src="@/assets/imgs/message/user_img01.jpg" alt="user-img" />
+        </div>
+      </template>
+    </messageItem>
+    <messageItem :message="messages[1]">
+      <template v-slot:headIcon>
+        <div class="headIcon">
+          <img src="@/assets/imgs/message/user_img02.jpg" alt="user-img" />
+        </div>
+      </template>
+    </messageItem>
+    <messageItem :message="messages[2]">
+      <template v-slot:headIcon>
+        <div class="headIcon">
+          <img src="@/assets/imgs/message/user_img02.jpg" alt="user-img" />
+        </div>
+      </template>
+    </messageItem>
+    <messageItem :message="messages[3]">
+      <template v-slot:headIcon>
+        <div class="headIcon">
+          <img src="@/assets/imgs/message/user_img02.jpg" alt="user-img" />
         </div>
       </template>
     </messageItem>
@@ -11,6 +32,7 @@
 </template>
 <script>
 import MessageItem from "./MessageItem.vue";
+
 export default {
   name: "Message",
   data() {
@@ -50,4 +72,22 @@ export default {
   },
 };
 </script>
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.message {
+  .headIcon img {
+    width: 50px;
+    height: 50px;
+    margin-right: 14px;
+  }
+}
+
+@media (min-width: 992px) {
+  .message {
+    .headIcon img {
+      width: 60px;
+      height: 60px;
+      margin-right: 16px;
+    }
+  }
+}
+</style>
