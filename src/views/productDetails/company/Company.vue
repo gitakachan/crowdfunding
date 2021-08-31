@@ -53,10 +53,7 @@ text-align: justify;"
 </template>
 <script>
 export default {
-  name: "",
-  data() {
-    return {};
-  },
+  name: "Company",
 };
 </script>
 <style lang="scss">

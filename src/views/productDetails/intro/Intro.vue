@@ -26,13 +26,10 @@
 </template>
 <script>
 export default {
-  name: "",
-  data() {
-    return {};
-  },
+  name: "Intro",
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .intro {
   h3 {
     padding-left: 15px;

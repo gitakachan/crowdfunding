@@ -72,10 +72,7 @@
 </template>
 <script>
 export default {
-  name: "",
-  data() {
-    return {};
-  },
+  name: "Support",
 };
 </script>
 <style lang="scss">

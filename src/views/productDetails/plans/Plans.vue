@@ -26,9 +26,6 @@ import plan from "./plan.vue";
 export default {
   components: { plan },
   name: "Plans",
-  data() {
-    return {};
-  },
 };
 </script>
 

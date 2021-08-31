@@ -31,9 +31,6 @@
 <script>
 export default {
   name: "ProcessItem",
-  data() {
-    return {};
-  },
   props: {
     event: {
       type: Object,

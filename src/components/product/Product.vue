@@ -199,7 +199,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 //buttons
 $secondary: #858377;
 $danger: #ff785e;

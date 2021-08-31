@@ -24,9 +24,6 @@
 <script>
 export default {
   name: "MessageItem",
-  data() {
-    return {};
-  },
   props: {
     message: {
       type: Object,

@@ -34,9 +34,6 @@ import Support from "./support/Support.vue";
 export default {
   components: { Support, Company, Plans },
   name: "productDetails",
-  data() {
-    return {};
-  },
 };
 </script>
 <style lang="scss" scoped>

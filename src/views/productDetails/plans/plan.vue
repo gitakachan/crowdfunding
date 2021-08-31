@@ -41,9 +41,6 @@
 <script>
 export default {
   name: "Plan",
-  data() {
-    return {};
-  },
 };
 </script>
 <style lang="scss" scoped>

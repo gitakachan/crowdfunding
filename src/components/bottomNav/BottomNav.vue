@@ -12,10 +12,7 @@
 </template>
 <script>
 export default {
-  name: "",
-  data() {
-    return {};
-  },
+  name: "BottomNav",
 };
 </script>
 <style lang="scss"></style>

@@ -89,6 +89,7 @@
                   class="form-control"
                   id="login-email"
                   aria-describedby="emailHelp"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -97,6 +98,7 @@
                   type="password"
                   class="form-control"
                   id="login-password"
+                  required
                 />
               </div>
               <p class="text-secondary" style="font-size:14px">忘記密碼？</p>
@@ -177,6 +179,7 @@
                   class="form-control"
                   id="signupemail"
                   aria-describedby="emailHelp"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -185,6 +188,7 @@
                   type="password"
                   class="form-control"
                   id="signuppassword"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -225,8 +229,7 @@
 </template>
 <script>
 export default {
-  components: {},
-  name: "",
+  name: "NavBar",
   data() {
     return {
       showLogin: false,
@@ -243,7 +246,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .navbar-nav .btn {
   width: 96px;
   height: 38px;

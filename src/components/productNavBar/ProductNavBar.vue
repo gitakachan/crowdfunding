@@ -34,7 +34,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .product-nav-bar {
   a {
     height: 70px;
