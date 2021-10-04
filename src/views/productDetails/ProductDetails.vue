@@ -1,5 +1,5 @@
 <template>
-  <div class="product-details container pt-times2 pt-lg-5">
+  <div ref="productDetails" class="product-details container pt-times2 pt-lg-5">
     <div class="row gx-5">
       <div class="details col-12 col-lg-8">
         <div class="pb-times2 pb-lg-5">
@@ -22,8 +22,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="support col-12 col-lg-8"></div> -->
     </div>
   </div>
 </template>
@@ -34,6 +32,24 @@ import Support from "./support/Support.vue";
 export default {
   components: { Support, Company, Plans },
   name: "productDetails",
+  inject: ["emitter"],
+  watch: {
+    "$route.path": {
+      handler() {
+        this.emitter.all.clear();
+        this.emitter.on("toTop", () => {
+          this.returnTop(this.$refs.productDetails);
+        });
+      },
+    },
+  },
+  methods: {
+    returnTop(ref) {
+      var top = ref.offsetTop;
+      window.scrollTo(0, top - 40);
+    },
+  },
+  mounted() {},
 };
 </script>
 <style lang="scss" scoped>

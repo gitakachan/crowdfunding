@@ -14,9 +14,17 @@ import BottomNav from "./components/bottomNav/BottomNav.vue";
 import Product from "./components/product/Product.vue";
 import ProductNavBar from "./components/productNavBar/ProductNavBar.vue";
 import ProductDetails from "./views/productDetails/ProductDetails.vue";
+
+import mitt from "mitt";
+const emitter = mitt();
 export default {
   name: "App",
   components: { NavBar, Product, ProductNavBar, ProductDetails, BottomNav },
+  provide() {
+    return {
+      emitter,
+    };
+  },
 };
 </script>
 
