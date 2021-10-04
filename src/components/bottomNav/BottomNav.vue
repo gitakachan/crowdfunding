@@ -3,7 +3,8 @@
     <li class="nav-item w-100">
       <a
         class="nav-link w-100 text-center text-dark fw-bold"
-        href="#support"
+        href="#"
+        @click.prevent="toBottom"
         style="height:44px"
         >贊助專案</a
       >
@@ -13,6 +14,11 @@
 <script>
 export default {
   name: "BottomNav",
+  methods: {
+    toBottom() {
+      window.scrollTo(0, document.body.scrollHeight);
+    },
+  },
 };
 </script>
 <style lang="scss"></style>
