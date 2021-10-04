@@ -7,13 +7,13 @@
         <img
           class="rounded-circle d-lg-none"
           style="width:70px; height:70px"
-          src="../../../assets/imgs/company/store_img.jpg"
+          src="@/assets/imgs/company/store_img.jpg"
           alt=""
         />
         <img
           class="rounded-circle d-none d-lg-block"
           style="width:100px; height:100px"
-          src="../../../assets/imgs/company/store_img.jpg"
+          src="@/assets/imgs/company/store_img.jpg"
           alt=""
         />
       </div>

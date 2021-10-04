@@ -2,7 +2,7 @@
   <div class="plan card rounded-3">
     <div class="img mb-2">
       <img
-        src="../../../assets/imgs/plans/plan_img.jpg"
+        src="@/assets/imgs/plans/plan_img.jpg"
         class="card-img-top"
         alt="..."
       />
