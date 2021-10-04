@@ -15,26 +15,39 @@ const routes = [
     path: "/",
     redirect: "/product/intro",
   },
-
   {
-    path: "/product/intro",
-    name: "intro",
-    component: Intro,
+    path: "/product",
+    redirect: "/product/intro",
+    children: [
+      {
+        path: "/product/intro",
+        name: "intro",
+        component: Intro,
+      },
+      {
+        path: "/product/qa",
+        name: "qa",
+        component: Qa,
+      },
+      {
+        path: "/product/process",
+        name: "process",
+        component: Process,
+      },
+      {
+        path: "/product/message",
+        name: "message",
+        component: Message,
+      },
+      {
+        path: "/product/:pathMatch(.*)*",
+        redirect: "/product/intro",
+      },
+    ],
   },
   {
-    path: "/product/qa",
-    name: "qa",
-    component: Qa,
-  },
-  {
-    path: "/product/process",
-    name: "process",
-    component: Process,
-  },
-  {
-    path: "/product/message",
-    name: "message",
-    component: Message,
+    path: "/:pathMatch(.*)*",
+    redirect: "/product/intro",
   },
 ];
 
