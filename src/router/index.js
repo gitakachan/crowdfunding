@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
+const ProductDetails = () =>
+  import("../views/productDetails/ProductDetails.vue");
 const Intro = () => import("../views/productDetails/intro/Intro.vue");
 const Qa = () => import("../views/productDetails/qa/Qa.vue");
 const Process = () => import("../views/productDetails/process/Process.vue");
@@ -17,25 +19,29 @@ const routes = [
   },
   {
     path: "/product",
-    redirect: "/product/intro",
+    component: ProductDetails,
     children: [
       {
-        path: "/product/intro",
+        path: "",
+        redirect: "/products/intro",
+      },
+      {
+        path: "intro",
         name: "intro",
         component: Intro,
       },
       {
-        path: "/product/qa",
+        path: "qa",
         name: "qa",
         component: Qa,
       },
       {
-        path: "/product/process",
+        path: "process",
         name: "process",
         component: Process,
       },
       {
-        path: "/product/message",
+        path: "message",
         name: "message",
         component: Message,
       },
