@@ -11,6 +11,7 @@
             />
           </a>
           <button
+            ref="collapseBtn"
             class="navbar-toggler border-0"
             type="button"
             data-bs-toggle="collapse"
@@ -29,14 +30,20 @@
                 v-for="(item, index) in nav"
                 :key="item"
                 :class="{ active: index === currentIndex }"
-                @click="navClick"
+                @click="
+                  navClick();
+                  collapse();
+                "
               >
                 {{ item }}
               </a>
               <button
                 type="button"
                 class="btn border-2 btn-warning rounded-pill ms-lg-auto"
-                @click="showModal('loginModal')"
+                @click="
+                  showModal('loginModal');
+                  collapse();
+                "
                 :backdrop="true"
               >
                 登入
@@ -45,7 +52,10 @@
               <button
                 type="button"
                 class="btn border-2 btn-outline-secondary rounded-pill mt-2 mt-lg-0"
-                @click="showModal('signupModal')"
+                @click="
+                  showModal('signupModal');
+                  collapse();
+                "
               >
                 註冊
               </button>
@@ -97,6 +107,12 @@ export default {
     openSignup() {
       this.hideModal("loginModal");
       this.showModal("signupModal");
+    },
+    collapse() {
+      if (window.innerWidth < 992) {
+        //折疊斷點設為lg 992px
+        this.$refs.collapseBtn.click();
+      }
     },
   },
 };
