@@ -1,5 +1,5 @@
 <template>
-  <div class="product-details pb-time4">
+  <div class="product-details pb-times4">
     <product></product>
     <product-nav-bar></product-nav-bar>
     <div ref="productDetails" class="container pt-times2 pt-lg-5">

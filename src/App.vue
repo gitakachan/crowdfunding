@@ -3,6 +3,7 @@
     <nav-bar></nav-bar>
     <router-view></router-view>
     <bottom-nav></bottom-nav>
+    <user-footer></user-footer>
   </div>
 </template>
 <script>
@@ -11,6 +12,7 @@ import BottomNav from "./components/bottomNav/BottomNav.vue";
 import ProductDetails from "./views/productDetails/ProductDetails.vue";
 
 import mitt from "mitt";
+import UserFooter from "./components/footer/UserFooter.vue";
 const emitter = mitt();
 
 export default {
@@ -19,6 +21,7 @@ export default {
     NavBar,
     ProductDetails,
     BottomNav,
+    UserFooter,
   },
   provide() {
     return {
