@@ -8,24 +8,26 @@
     <div class="items">
       <plan class="mb-3">
         <template v-slot:title>買一送一，只有兩百組別錯過</template>
-        <template v-slot:price>$1600</template>
+        <template v-slot:price>${{ setNum(1600) }}</template>
       </plan>
       <plan class="mb-3">
         <template v-slot:title>買一送一，只有兩百組別錯過</template>
-        <template v-slot:price>$1600</template>
+        <template v-slot:price>${{ setNum(1600) }}</template>
       </plan>
       <plan>
         <template v-slot:title>買一送一，只有兩百組別錯過</template>
-        <template v-slot:price>$1600</template>
+        <template v-slot:price>${{ setNum(1600) }}</template>
       </plan>
     </div>
   </div>
 </template>
 <script>
+import toLocaleStringMixin from "@/mixins/toLocaleStringMixin";
 import plan from "./plan.vue";
 export default {
-  components: { plan },
   name: "Plans",
+  mixins: [toLocaleStringMixin],
+  components: { plan },
 };
 </script>
 

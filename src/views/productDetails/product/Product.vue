@@ -34,13 +34,13 @@
           <div class="content pt-3 pt-lg-0">
             <!-- target -->
             <div class="target fs-14 text-dark mb-1 mb-lg-0">
-              目標 <span class="baloo">$600,000</span>
+              目標 <span class="baloo">${{ setNum(600000) }}</span>
             </div>
             <div
               class="baloo fs-times2 fw-bold"
               style="color:#53524F; height:56px; line-height:56px"
             >
-              $280,047
+              ${{ setNum(280047) }}
             </div>
             <!-- progress bar -->
             <div class="progress mb-2 mb-lg-20">
@@ -62,14 +62,14 @@
                 <div class="text-dark fs-14">贊助人數</div>
                 <div class="fs-2 fw-bold">
                   <!-- 數字套用baloo字體後高度比較小 所以再放大 -->
-                  <span class="baloo fs-1">1374</span> 人
+                  <span class="baloo fs-1">{{ setNum(1374) }}</span> 人
                 </div>
               </div>
               <div class="countdown flex-grow-1">
                 <div class="text-dark fs-14">募資倒數</div>
                 <div class="fs-2 fw-bold">
                   <!-- 數字套用baloo字體後高度比較小 所以再放大 -->
-                  <span class="baloo fs-1">27</span> 天
+                  <span class="baloo fs-1">{{ setNum(27) }}</span> 天
                 </div>
               </div>
             </div>
@@ -176,8 +176,10 @@
 </template>
 <script>
 import tooltip from "@/methods/tooltip.js";
+import toLocaleStringMixin from "@/mixins/toLocaleStringMixin";
 export default {
   name: "Product",
+  mixins: [toLocaleStringMixin],
   data() {
     return {
       icons: [
