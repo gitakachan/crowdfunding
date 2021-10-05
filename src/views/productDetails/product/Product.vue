@@ -82,22 +82,28 @@
                   :key="item.title"
                 >
                   <img :src="item.link" alt="" />
-                  <span class="mx-auto d-md-none fs-12">{{ item.title }}</span>
-                  <span class="mx-auto d-none d-md-block fs-14">{{
+                  <span class="mx-auto d-lg-none fs-12">{{ item.title }}</span>
+                  <span class="mx-auto d-none d-lg-block fs-14">{{
                     item.title
                   }}</span>
                 </div>
               </div>
               <div class="laptop d-none d-lg-block">
                 <div class="d-flex">
-                  <img
-                    style="width:24px; height:24px"
+                  <button
                     v-for="item in icons"
                     :key="item.title"
-                    :src="item.link"
-                    alt=""
-                    v-tooltip="item.title"
-                  />
+                    class="btn p-0"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    :title="item.title"
+                  >
+                    <img
+                      style="width:24px; height:24px"
+                      :src="item.link"
+                      alt=""
+                    />
+                  </button>
                 </div>
               </div>
             </div>
@@ -169,6 +175,7 @@
   </div>
 </template>
 <script>
+import tooltip from "@/methods/tooltip.js";
 export default {
   name: "Product",
   data() {
@@ -196,6 +203,9 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    tooltip();
   },
 };
 </script>
@@ -241,99 +251,5 @@ $warning: #ffdf65;
       }
     }
   }
-}
-//tooltip style
-.tooltip {
-  display: block !important;
-  z-index: 10000;
-}
-
-.tooltip .tooltip-inner {
-  background: #494846;
-  border-radius: 4px;
-  padding: 5px 10px 4px;
-  font-weight: 200;
-  letter-spacing: 2px;
-}
-
-.tooltip .tooltip-arrow {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  position: absolute;
-  margin: 5px;
-  border-color: black;
-}
-
-.tooltip[x-placement^="top"] {
-  margin-bottom: 5px;
-}
-
-.tooltip[x-placement^="top"] .tooltip-arrow {
-  border-width: 5px 5px 0 5px;
-  border-left-color: transparent !important;
-  border-right-color: transparent !important;
-  border-bottom-color: transparent !important;
-  bottom: -5px;
-  left: calc(50% - 5px);
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.tooltip[x-placement^="bottom"] {
-  margin-top: 5px;
-}
-
-.tooltip[x-placement^="bottom"] .tooltip-arrow {
-  border-width: 0 5px 5px 5px;
-  border-left-color: transparent !important;
-  border-right-color: transparent !important;
-  border-top-color: transparent !important;
-  top: -5px;
-  left: calc(50% - 5px);
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.tooltip[x-placement^="right"] {
-  margin-left: 5px;
-}
-
-.tooltip[x-placement^="right"] .tooltip-arrow {
-  border-width: 5px 5px 5px 0;
-  border-left-color: transparent !important;
-  border-top-color: transparent !important;
-  border-bottom-color: transparent !important;
-  left: -5px;
-  top: calc(50% - 5px);
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.tooltip[x-placement^="left"] {
-  margin-right: 5px;
-}
-
-.tooltip[x-placement^="left"] .tooltip-arrow {
-  border-width: 5px 0 5px 5px;
-  border-top-color: transparent !important;
-  border-right-color: transparent !important;
-  border-bottom-color: transparent !important;
-  right: -5px;
-  top: calc(50% - 5px);
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.tooltip[aria-hidden="true"] {
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.15s, visibility 0.15s;
-}
-
-.tooltip[aria-hidden="false"] {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.15s;
 }
 </style>

@@ -5,7 +5,6 @@
     <bottom-nav></bottom-nav>
   </div>
 </template>
-
 <script>
 import NavBar from "../src/components/navbar/NavBar.vue";
 import BottomNav from "./components/bottomNav/BottomNav.vue";
