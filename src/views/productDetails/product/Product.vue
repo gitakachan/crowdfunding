@@ -25,8 +25,8 @@
           <img
             class="img-fluid"
             style="border-radius:40px"
-            src="../../assets/imgs/product/produt.jpg"
-            alt=""
+            src="@/assets/imgs/product/produt.jpg"
+            alt="產品圖片"
           />
         </div>
         <!-- content on the right -->

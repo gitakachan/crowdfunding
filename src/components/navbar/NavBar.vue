@@ -126,9 +126,6 @@ export default {
 
 .modal-content {
   height: 444px;
-  a {
-    cursor: pointer;
-  }
 
   .modal-body {
     input {

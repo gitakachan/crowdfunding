@@ -25,9 +25,9 @@
   </div>
 </template>
 <script>
-import Product from "@/components/product/Product.vue";
-import ProductNavBar from "@/components/productNavBar/ProductNavBar.vue";
-import Support from "@/components/support/Support.vue";
+import Product from "./product/Product.vue";
+import ProductNavBar from "./productNavBar/ProductNavBar.vue";
+import Support from "./support/Support.vue";
 import Company from "./company/Company.vue";
 import Plans from "./plans/Plans.vue";
 export default {
