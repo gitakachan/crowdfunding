@@ -59,7 +59,7 @@
       </div>
       <!-- block button:
       https://bootstrap5.hexschool.com/docs/5.0/components/buttons/#block-buttons -->
-      <div class="d-grid col-12 d-lg-flex justify-content-md-center">
+      <div class="d-grid col-12 d-lg-flex justify-content-lg-center">
         <button
           type="submit"
           class="btn btn-warning fs-5 mt-times2 mt-lg-2 text-dark fw-bold"
